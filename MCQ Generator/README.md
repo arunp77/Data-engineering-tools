@@ -5,6 +5,27 @@
 ## Overview:
 This project aims to create a FastAPI application to generate Multiple Choice Questions (MCQs) via a smartphone or web browser application. The API allows users to select test types, categories, and the number of questions to receive randomized MCQs. Additionally, the API supports basic authentication for user verification and admin features for question management.
 
+## Project directory structure
+
+project_folder/
+│
+├── api/
+│   ├── __init__.py
+│   ├── auth.py
+│   ├── endpoints.py
+│   ├── models.py
+│   └── utils.py
+│
+├── data/
+│   └── questions_en.xlsx
+│
+├── tests/
+│   └── test_api.py
+│
+├── main.py
+└── requirements.txt
+
+
 ## Features:
 1. **Question Generation**: Users can request MCQs based on test type and categories, with the option to specify the number of questions. Questions are returned in a random order.
    
