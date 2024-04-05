@@ -1,25 +1,16 @@
 from fastapi import FastAPI
 from typing import Optional
-app = FastAPI()
-@app.get('/')
-def get_index(argument1):
-    return {
-        'data': argument1
-    }
-@app.get('/typed')
-def get_typed(argument1: int):
-    return {
-        'data': argument1 + 1
-    }
-    
-    
+from pydantic import BaseModel
 
-@app.get('/addition')
-def get_addition(a: int, b: Optional[int]=None):
-    if b:
-        result = a + b
-    else:
-        result = a + 1
+class Item(BaseModel):
+    itemid: int
+    description: str
+    owner: Optional[str] = None
+
+app = FastAPI()
+
+@app.post('/item')
+def post_item(item: Item):
     return {
-        'addition_result': result
+        'itemid': item.itemid
     }
