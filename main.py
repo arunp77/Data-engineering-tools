@@ -68,6 +68,3 @@ def create_question(question: Question, credentials: User = Depends(authenticate
 def healthcheck():
     return {"status": "API is up and running"}
 
-# Testing command
-# curl -X POST "http://localhost:8000/generate_questions" -H "Authorization: Basic YWxpY2U6d29uZGVybGFuZA==" -H "Content-Type: application/json" -d "{\"use\":\"Positioning test\",\"categories\":[\"Databases\",\"Data Streaming\"],\"num_questions\":5}"
-
