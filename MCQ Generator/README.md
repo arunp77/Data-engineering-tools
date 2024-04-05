@@ -39,7 +39,7 @@ project_folder/
 - `POST /token/`: This endpoint allows users to authenticate and obtain a JWT token.
 - `POST /questions/`: This endpoint allows an admin user to create a new question.
 
-![MCQ Generator](MCQ Generator\images\Questionnaire-api.png)
+![MCQ Generator](images\Questionnaire-api.png)
 
 ## Setup:
 1. **Clone the repository from GitHub:** `git clone https://github.com/arunp77/FastApi-userdatabase.git`
