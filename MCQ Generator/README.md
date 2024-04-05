@@ -35,9 +35,9 @@ project_folder/
 3. **Admin Features**: Admin users with the password "4dm1N" can create new questions via a dedicated endpoint. This ensures seamless management of the question database.
 
 ## Endpoints:
-- `/generate_questions`: POST endpoint to generate MCQs based on test type, categories, and the number of questions requested.
-- `/authenticate`: POST endpoint for user authentication. Users must provide valid credentials to access protected endpoints.
-- `/create_question`: POST endpoint for admin users to create new questions. Requires admin credentials for authorization.
+- `GET /questions/`: This endpoint allows users to retrieve a list of questions based on the provided criteria.
+- `POST /token/`: This endpoint allows users to authenticate and obtain a JWT token.
+- `POST /questions/`: This endpoint allows an admin user to create a new question.
 
 ## Setup:
 1. **Clone the repository from GitHub:** `git clone https://github.com/arunp77/FastApi-userdatabase.git`
