@@ -7,6 +7,7 @@ This project aims to create a FastAPI application to generate Multiple Choice Qu
 
 ## Project directory structure
 
+```bash
 project_folder/
 │
 ├── api/
@@ -24,7 +25,7 @@ project_folder/
 │
 ├── main.py
 └── requirements.txt
-
+```
 
 ## Features:
 1. **Question Generation**: Users can request MCQs based on test type and categories, with the option to specify the number of questions. Questions are returned in a random order.
