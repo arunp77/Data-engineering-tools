@@ -1,51 +1,25 @@
 from fastapi import FastAPI
-users_db = [
-    {
-        'user_id': 1,
-        'name': 'Alice',
-        'subscription': 'free tier'
-    },
-    {
-        'user_id': 2,
-        'name': 'Bob',
-        'subscription': 'premium tier'
-    },
-    {
-        'user_id': 3,
-        'name': 'Clementine',
-        'subscription': 'free tier'
-    }
-]
+from typing import Optional
 app = FastAPI()
-@app.get('/', description="Welcome")
-def welcome():
+@app.get('/')
+def get_index(argument1):
     return {
-        'greetings': 'welcome'
+        'data': argument1
     }
-@app.get('/users')
-def get_users():
-    return users_db
+@app.get('/typed')
+def get_typed(argument1: int):
+    return {
+        'data': argument1 + 1
+    }
+    
+    
 
-@app.get('/users/{userid:int}')
-def get_user(userid):
-    try:
-        user = list(filter(lambda x: x.get('user_id') == userid, users_db))[0]
-        return user
-    except IndexError:
-        return {}
-
-@app.get('/users/{userid:int}/name')
-def get_user_name(userid):
-    try:
-        user = list(filter(lambda x: x.get('user_id') == userid, users_db))[0]
-        return {'name': user['name']}
-    except IndexError:
-        return {}
-
-@app.get('/users/{userid:int}/subscription')
-def get_user_suscription(userid):
-    try:
-        user = list(filter(lambda x: x.get('user_id') == userid, users_db))[0]
-        return {'subscription': user['subscription']}
-    except IndexError:
-        return {}
+@app.get('/addition')
+def get_addition(a: int, b: Optional[int]=None):
+    if b:
+        result = a + b
+    else:
+        result = a + 1
+    return {
+        'addition_result': result
+    }
