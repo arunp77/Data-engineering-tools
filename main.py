@@ -1,16 +1,12 @@
 from fastapi import FastAPI
-from typing import Optional
 from pydantic import BaseModel
-
-class Item(BaseModel):
-    itemid: int
-    description: str
-    owner: Optional[str] = None
+from typing import Optional
+from fastapi import Header
 
 app = FastAPI()
-
-@app.post('/item')
-def post_item(item: Item):
+data = [1, 2, 3, 4, 5]
+@app.get('/data')
+def get_data(index):
     return {
-        'itemid': item.itemid
+        'data': data[int(index)]
     }
