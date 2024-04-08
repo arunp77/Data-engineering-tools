@@ -1,0 +1,15 @@
+# Spotify API
+spotipy==2.22.0
+
+# Data manipulation and analysis
+pandas==1.3.3
+numpy==1.21.2
+matplotlib==3.4.3
+seaborn==0.11.2
+
+# Environment management
+python-decouple==3.6
+
+
+# Optional Jupyter Notebook support (for interactive data analysis)
+jupyterlab==4.1.1
