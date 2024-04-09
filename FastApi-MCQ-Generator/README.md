@@ -1,6 +1,6 @@
 # Project Title: FastAPI MCQ Generator with Authentication and Admin Features
 
-[Project Github repository](https://github.com/arunp77/FastApi-userdatabase/tree/main/MCQ%20Generator)
+[Project Github repository](https://github.com/arunp77/Data-engineering-tools/tree/main/FastApi-MCQ-Generator)
 
 ## Overview:
 This project aims to create a FastAPI application to generate Multiple Choice Questions (MCQs) via a smartphone or web browser application. The API allows users to select test types, categories, and the number of questions to receive randomized MCQs. Additionally, the API supports basic authentication for user verification and admin features for question management.
