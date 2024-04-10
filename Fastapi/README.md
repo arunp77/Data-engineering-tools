@@ -27,6 +27,9 @@ project_folder/
 └── requirements.txt        # File listing Python dependencies for the project
 ```
 
+## Files and description:
+
+
 ## Features:
 
 - **Authentication:** Secure authentication mechanism using Basic Authentication, ensuring authorized access to the API endpoints.
@@ -39,12 +42,12 @@ project_folder/
    2. **Endpoint Error Handling (`endpoints.py`):**
         - Error handling is implemented within each endpoint function to handle potential errors gracefully.
         - For example, in the `generate_mcqs` endpoint, if any error occurs during the generation of MCQs, an appropriate exception can be raised to notify the client about the issue.
-   3. **Global Error Handling (`main.py`):** FastAPI provides built-in support for global error handling through middleware. Custom middleware or exception handlers can be added to handle errors that occur at the application level, such as uncaught exceptions or validation errors.
+   3. **Global Error Handling (`main.py`):** provides built-in support for global error handling through middleware. Custom middleware or exception handlers can be added to handle errors that occur at the application level, such as uncaught exceptions or validation errors.
         - Two exception handler middleware functions are defined: `http_exception_handler` and `generic_exception_handler`.
         - `http_exception_handler` handles `HTTPExceptions` raised by FastAPI, which are typically used to return specific HTTP status codes and error messages.
         - `generic_exception_handler` catches any other exceptions that may occur and returns a generic internal server error message with a status code of 500.
         - Both middleware functions receive the request and the exception object as parameters and return a JSONResponse with the appropriate status code and error message.
-- **User Authentication:** Endpoint to verify the functionality and availability of the API. Basic authentication is implemented to verify user credentials. Users must provide a valid username and password to access the API endpoints.
+- **User Authentication:** Endpoint to verify the functionality and availability of the API. Basic authentication is implemented to verify user credentials. Users must provide a valid username and password to access the API e FastAPIndpoints.
 - **Admin Features**: Admin users with the password "4dm1N" can create new questions via a dedicated endpoint. This ensures seamless management of the question database.
 - **API Documentation:** Interactive documentation powered by **Swagger UI**, providing detailed information on available endpoints and request parameters.
 
