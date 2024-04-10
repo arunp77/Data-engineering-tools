@@ -2,7 +2,7 @@
 
 This repository contains the fundamentals of various tools used in the Data engineering. 
 
-- [FastApi-MCQ Generator](MCQ-Generator)
+- [FastApi-MCQ Generator](Fastapi)
 - [Flask](Flask)
 - [Bash-scripting](https://github.com/arunp77/bash-scripting)
 - [Version control: Git & GitHub](https://github.com/arunp77/Learning-git)
