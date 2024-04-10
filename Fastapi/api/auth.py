@@ -1,6 +1,7 @@
 from fastapi import HTTPException, Depends, status
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from pydantic import BaseModel
+from fastapi import HTTPException, Depends, status
 
 security = HTTPBasic()
 
@@ -12,26 +13,31 @@ def authenticate(credentials: HTTPBasicCredentials = Depends(security)):
     - credentials (HTTPBasicCredentials): The username and password provided in the request.
 
     Returns:
-    - str: The username if authentication is successful.
+    - Tuple[str, bool]: A tuple containing the username and a boolean indicating whether the user is a superuser.
 
     Raises:
     - HTTPException: If the provided username or password is incorrect.
     """
     correct_username = credentials.username
-    correct_password = {
+    correct_passwords = {
         "alice": "wonderland",
         "bob": "builder",
         "clementine": "mandarine",
         "admin": "4dm1N"
-    }.get(correct_username)
+    }
     
-    if not correct_password or credentials.password != correct_password:
+    correct_password = correct_passwords.get(correct_username)
+    
+    if correct_username == "admin" and credentials.password == correct_password:
+        return correct_username, True
+    elif not correct_password or credentials.password != correct_password:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Incorrect username or password",
             headers={"WWW-Authenticate": "Basic"},
         )
-    return correct_username
+    else:
+        return correct_username, False
 
 class Token(BaseModel):
     """
