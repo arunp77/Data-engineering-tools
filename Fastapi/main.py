@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from api.endpoints import router as api_router
-from api.auth import router as api_router
 
 app = FastAPI(
     title="Questionnaire API",
