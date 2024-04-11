@@ -35,10 +35,6 @@ jobs:
         with:
           source: ./
           destination: ./_site
-      - name: Create _site directory
-        run: mkdir _site
-      - name: Copy index.html to _site
-        run: cp build/html/index.html _site/index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
