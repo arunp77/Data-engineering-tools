@@ -34,7 +34,7 @@ from api.endpoints import router as api_router
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import JSONResponse
 
-app = FastAPI(
+app = FastAPI( 
     title="FastAPI Multiple Choice Questions (MCQs) Generator ",
     description="This API allows users to manage questionnaires, authenticate users, and create questions. This API is created by <strong>Arun Kumar Pandey</strong>.",
     version="1.0.0"
