@@ -49,3 +49,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      # Modify the deployment to consider index.html as the starting page
+      - name: Modify index.html for GitHub Pages
+        run: |
+          echo "<meta http-equiv='refresh' content='0;url=index.html'>" > _site/index.html
