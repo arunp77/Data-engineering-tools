@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "fastapi : questionnaire mcq creation"
+version = "0.1.0"
+description = "This project aims to create a FastApi application to generate MCQs via a smartphone or web browser application. The api allows users to select test types, categories, and the number of questions to recieve randomized MCQs. Additionally the API supports basic authentication for user verification and admin features for question managment."
+authors = ["Arun Kumar Pandey <arunp77@gmail.com>"]
+license = "GNU General Public License"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
