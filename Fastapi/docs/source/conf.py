@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'MCQ Generator'
+project = 'MCQ generator'
 copyright = '2024, Arun Kumar Pandey'
 author = 'Arun Kumar Pandey'
 release = 'April 2024'
