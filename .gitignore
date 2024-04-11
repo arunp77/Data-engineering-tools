@@ -128,13 +128,6 @@ ENV/
 env.bak/
 venv.bak/
 
-# files to be ignored.
-natural_earth_vector/
-map.html 
-test.ipynb 
-world-administrative-boundaries.shp
-NE1_50M_SR_W.tif
-
 # Spyder project settings
 .spyderproject
 .spyproject
@@ -166,4 +159,5 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
+# Docker
 Docker/getting-started-app/
