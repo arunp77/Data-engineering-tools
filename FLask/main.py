@@ -10,7 +10,7 @@ load_dotenv()
 app = Flask(__name__)
 
 
-app.config['SECRET_KEY'] = 'bcc6cb6bc8f57097cf82daa981623d31'
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
 
 posts = [
     {
