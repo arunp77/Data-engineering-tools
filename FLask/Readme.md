@@ -149,6 +149,9 @@ Congratulations! You've now learned the basics of Flask and how to create a simp
 
 - Flask Documentation: https://flask.palletsprojects.com/
 - Flask Tutorial: https://flask.palletsprojects.com/en/2.0.x/tutorial/
+- Reference [youtube playlist](https://www.youtube.com/watch?v=MwZwr5Tvyxo&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=1).
+- [Developing Apis with python and Flask](https://auth0.com/blog/developing-restful-apis-with-python-and-flask/)
+- [Wonderful Flask Api documentation](https://flask.palletsprojects.com/en/latest/api/)
 
 ---
 ## Let's get connected:
