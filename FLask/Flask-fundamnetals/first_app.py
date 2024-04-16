@@ -43,9 +43,9 @@ def head():
 def hello():
   return "Hello World"
 
-@app.errorhandler(NotFound)
-def handler_error404(err):
-  return "You have encountered an error of 404",404
+# @app.errorhandler(NotFound)
+# def handler_error404(err):
+#   return "You have encountered an error of 404",404
 
 
 if __name__ == "__main__":
