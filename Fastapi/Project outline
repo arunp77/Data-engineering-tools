@@ -1,0 +1,45 @@
+I want I have been tasked to create API. This task has been asked by a company which creates questionnaiers via smartphone or web browser application. The purpose of this API is to query a database to return a series of questions. 
+
+The database is represented by a excel file 'questions_en.xlsx'. This dataset has following data columns:
+
+'question', 'subject', 'use', 'correct', 'responseA', 'responseB', 'responseC', 'responseD', 'remark'
+
+Few lines of the dataset is:
+
+question	subject	use	correct	responseA	responseB	responseC	responseD	remark
+What does No-SQL stand for?	Databases	Positioning test	A	Not OnlySQL	NoSQL	Not all SQL	NaN	NaN
+Cassandra and HBase are databases	Databases	Positioning test	C	relational database	object-oriented	column-oriented	graph-oriented	NaN
+MongoDB and CouchDB are databases	Databases	Positioning test	B	relational database	object-oriented	column-oriented	graph-oriented	NaN
+OrientDB and Neo4J are databases	Databases	Positioning test	D	relational database	object-oriented	column-oriented	graph-oriented	NaN
+To index textual data, I can use	Databases	Positioning test	A	ElasticSearch	Neo4J	mysql	NaN	NaN
+
+Here in the dataset (which are MCQ question), columns represents:
+
+- 'question': Is the question, 
+- 'subject': question belongs to ('Databases', 'Distributed systems', 'Data Streaming', 'Docker', 'Classification', 'data science', 'machine-learning', 'Automation'), 
+- 'use': what kind of the question is ('Positioning test', 'Validation test', 'Total Boot Camp'), 
+- 'correct': Correction option ('A', 'C', 'B', 'D', 'B,C', 'A C', 'B C', 'A B C D', nan), 
+The 4 MCQs are 'responseA':, 'responseB', 'responseC', 'responseD', and we need to choose from one of them. The correct one comes under columns = 'correct'
+- 'remark': some remaks
+
+In the application (FASTAPI), I want to do following. I want to see the following options:
+
+- A user must be able to choose a test type (from the 'use'  column) as well as one or more categories (subject).
+- Next I want that the application must be able to produce MCQs of 5 or 10 or 20 questions. The API must therefore be able to return this number of questions.
+- As the application must be able to generate many MCQs, the questions must be returned in a random order: thus, a request with the same parameters can return different questions.
+
+Also I have little bit more requirments:
+
+- the API uses basic authentication, based on 'username' and 'password': the string containing 'Basic username:password' will have to be passed in the Authorization header (in theory, this string should be encoded but to simplify the exercise, we can choose not to encode it)
+- Let me give you three person with access to the API. No one elase has access other then these three people and admin
+{
+    "alice": "wonderland",
+    "bob": "builder",
+    "clementine": "mandarine"
+}
+- The 'admin' credentitals are: 
+{
+   "admin" : "4dm1N"
+}
+
+The API will also need to implement an endpoint to verify that the API is functional.
