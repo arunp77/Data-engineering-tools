@@ -23,7 +23,7 @@ def hello():
 
 @app.route("/hello/<name>")  # curl -X GET http://localhost:5000/hello/Arun
 def hello_name(name):
-    return "Hello {}".format(name)
+    return f"Hello {name}!"
 # Do not consider this line </name>   
 
 @app.route("/hello_post", methods=["POST"]) # curl -X POST -H "Content-Type: application/json" -d '{"name": "Arun"}' http://localhost:5000/hello_post
