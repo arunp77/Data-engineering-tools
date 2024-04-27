@@ -8,7 +8,7 @@ app = Flask(__name__, template_folder=os.path.join(current_directory))
 
 @app.route("/test")
 def test():
-    return make_response("I use the function make_response.")    
+    return make_response("I use the function 'make_response'.")    
 
 
 if __name__ == "__main__":
