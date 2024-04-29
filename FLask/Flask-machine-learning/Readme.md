@@ -20,7 +20,7 @@ This project aims to deploy machine learning models using Flask APIs. Three diff
 
 ### Running the API
 1. **Clone the repository:** `git clone https://github.com/arunp77/Data-engineering-tools.git`
-2. **Navigate to the project directory:** `cd your-repo`
+2. **Navigate to the project directory:** `cd FLask/Flask-machine-learning` which is inside the `Flask` folder of the home directory.
 3. Install dependencies: `pip install -r requirements.txt`
 4. Run the Flask API: `python api.py`
 
