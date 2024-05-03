@@ -1,0 +1,84 @@
+stages:
+  - setup
+  - test
+  - build
+  - deploy
+  - doc
+
+setup:
+  stage: setup
+  tags:
+    - ads::docker
+  script:
+    - python3 -m venv ../venv
+    - source ../venv/bin/activate
+    - python3 -m pip install --upgrade pip setuptools wheel
+  artifacts:
+    paths:
+      - venv
+
+test:
+  stage: test
+  tags:
+    - ads::docker
+  before_script:
+    - source ../venv/bin/activate
+    - python3 -m pip install pytest netCDF4
+    - apt-get update && apt-get --assume-yes install netcdf-bin
+  script:
+    - python3 -m pytest
+    
+coverage:
+  stage: test
+  tags:
+    - ads::docker
+  before_script:
+    - pip install pytest-cov netCDF4
+    - apt-get update && apt-get --assume-yes install netcdf-bin
+  script:
+    - pytest --cov-report term --cov=netcdf_flattener
+    
+security:
+  stage: test
+  tags:
+    - ads::docker
+  before_script:
+    - pip install bandit
+  script:
+    - bandit -r . -b test/bandit_whitelisting.json
+
+build_wheel:
+  stage: build
+  tags:
+    - ads::docker
+  before_script:
+    - source ../venv/bin/activate
+  script:
+    - python3 setup.py bdist_wheel
+  artifacts:
+    paths:
+      - dist/netcdf_flattener-*.whl
+
+build_doc:
+  stage: doc
+  tags:
+    - ads::docker
+  before_script:
+    - source ../venv/bin/activate
+    - python3 -m pip install sphinx netCDF4
+  script:
+    - cd doc
+    - sphinx-build -b html . build
+  artifacts:
+    paths:
+      - doc/build/*
+
+deploy:
+  stage: deploy
+  tags:
+    - ads::docker
+  before_script:
+    - source ../venv/bin/activate
+  script:
+    - python3 -m pip install --upgrade --force-reinstall dist/netcdf_flattener-*.whl
+    - python3 -c "import netcdf_flattener"
