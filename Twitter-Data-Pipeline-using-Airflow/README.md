@@ -1,5 +1,8 @@
 # End-To-End Data Engineering Project
 
+
+# Due to recent changes from the Twitter API rules, I could not finish the project. But for the reference, one can watch the [youtube video by Darshil](https://www.youtube.com/watch?v=q8q3OFFfY6c&t=1456s).
+
 ## Project Overview
 
 This project demonstrates an end-to-end data engineering pipeline using Apache Airflow and Python. The pipeline extracts data from the Twitter API, transforms the data, and saves the final results to Amazon S3. The entire workflow is orchestrated using Apache Airflow, and the code is deployed on an EC2 instance.
