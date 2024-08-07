@@ -209,18 +209,43 @@ This will run the test suite located in the `tests` directory, ensuring that all
     ```
     and then run:
     ```bash
-    pip install -e .
+    pip install -e . -v
     ```
-    The `-e` flag stands for "editable," which means any changes you make to the code will immediately be reflected without needing to reinstall the package.
+    The `-e` flag stands for "editable," which means any changes you make to the code will immediately be reflected without needing to reinstall the package. Here `-v` will give you more detailed output about what is happening during the installation process.
+
+    ![alt text](image.png)
+
+    We can alsi install it using:
+
+    ```bash
+    pip install mathlib
+    ```
+    ![alt text](image-1.png)
 
 - **Step 2: Verify Installation**
   
   After running the installation, you can verify that the package was installed by running:
 
     ```bash
-    pip install mathlib
+    pip show mathlib
     ```
     This should display information about the mathlib package, such as the version and location.
+
+    > **Verify Import in Python Shell:**
+    > Try importing mathlib directly in the Python shell to ensure it is correctly recognized:
+    > ```bash
+    > >>> import mathlib
+    >
+    > >>> mathlib
+    > ```
+> We can also install mathlib, directly using `setup.py` file, using:
+> ```bash
+> python setup.py install --verbose
+> ```
+> This will give you more detailed output about what is happening during the installation process.
+>
+> If you're using `pip install`, you can add the `-v` option for verbose output:
+
 
 - **Step 3: Run the Tests**
   Once the package is installed, you should run the tests to ensure everything is working as expected.
