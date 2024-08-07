@@ -42,9 +42,3 @@ database_project/
 ### Prerequisites
 - Docker and Docker Compose installed on your machine.
 - Python 3.7+ installed on your machine.
-
-### Step 1: Clone the Repository
-Clone this repository to your local machine.
-```sh
-git clone https://github.com/yourusername/database_project.git
-cd database_project
