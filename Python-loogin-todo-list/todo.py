@@ -32,7 +32,7 @@ class ToDoApp:
             logger.info(f"{len(self.tasks)} tasks shown")
 
 def main():
-    app = ToDoApp()
+    app = ToDoApp() 
 
     while True:
         print("\nOptions:")
