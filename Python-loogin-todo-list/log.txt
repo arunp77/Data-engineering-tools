@@ -1,0 +1,8 @@
+2024-08-18 14:57:55 - ArthmeticApp - DEBUG - Subtracting 10 + 15 = -5
+2024-08-18 14:57:55 - ArthmeticApp - DEBUG - Dividing 10 / 2 =5.0
+2024-08-18 14:57:55 - ArthmeticApp - ERROR - Division by zero is not allowed.
+2024-08-18 14:59:40 - ArithmeticApp - DEBUG - Adding 10 + 15 = 25
+2024-08-18 14:59:40 - ArithmeticApp - DEBUG - Subtracting 10 - 15 = -5
+2024-08-18 14:59:40 - ArithmeticApp - DEBUG - Multiplying 10 * 2 = 20
+2024-08-18 14:59:40 - ArithmeticApp - DEBUG - Dividing 10 / 2 = 5.0
+2024-08-18 14:59:40 - ArithmeticApp - ERROR - Division by zero is not allowed.
