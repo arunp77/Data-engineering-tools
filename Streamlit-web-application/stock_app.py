@@ -5,6 +5,7 @@ from datetime import datetime
 
 # Title of the app
 st.title('Stock Price Visualizer')
+st.write("This is a simple web application built using [Streamlit](https://streamlit.io/) that allows users to visualize historical stock prices for a given stock ticker symbol. Users can enter a stock ticker, select a date range, and view the stock's closing prices plotted on a chart.")
 
 # Input for the stock ticker
 ticker_symbol = st.text_input('Enter Stock Ticker Symbol', 'AAPL')
