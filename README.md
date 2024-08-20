@@ -1,5 +1,8 @@
 # About this Repository
 
+<p><strong>Author: </strong><a href="https://arunp77.github.io/" target="_black">Arun Kumar Pandey</a></p>
+<p><strong>Repository: </strong> <a href="https://github.com/arunp77/Data-engineering-tools/" target="_blanck">Github repo</a></p> 
+
 ![Data-engineering](data-engineering.png)
 
 Welcome to my Data Engineering Toolbox repository! Here, you'll find a collection of fundamentals for various tools used in data engineering. This repository is aimed at providing resources, tutorials, and examples to help you learn and understand these tools.
