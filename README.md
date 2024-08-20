@@ -6,16 +6,17 @@ Welcome to my Data Engineering Toolbox repository! Here, you'll find a collectio
 
 - [Database & Datapipelines](https://github.com/arunp77/Database-datapipeline-ETL)
 - [SQL](https://github.com/arunp77/SQL)
-- [FastApi-MCQ Generator](Fastapi)
-- [Flask](Flask)
-- [Elasticsearch](elasticsearch)
-- [Docker](Docker)
-- [Kafka-Streaming](Kafka-streaming)
-- [Pyspark](pyspark)
+- [FastApi-MCQ Generator](https://github.com/arunp77/Data-engineering-tools/tree/main/Fastapi)
+- [Flask application](https://github.com/arunp77/Data-engineering-tools/tree/main/FLask)
+- [Elasticsearch](https://github.com/arunp77/Data-engineering-tools/tree/main/elasticsearch)
+- [Docker basics and concepts](https://github.com/arunp77/Data-engineering-tools/tree/main/Docker)
+- [Kafka-Streaming project](https://github.com/arunp77/Data-engineering-tools/tree/main/Kafka-streaming)
+- [Pyspark project](https://github.com/arunp77/Data-engineering-tools/tree/main/pyspark)
 - [Web-scrapping](https://github.com/arunp77/web-scrapping)
 - [Github Actions](https://github.com/arunp77/github_actions)
 - [Bash-scripting](https://github.com/arunp77/bash-scripting)
 - [Version control: Git & GitHub](https://github.com/arunp77/Learning-git)
+- [Python-logging-todo-list](https://github.com/arunp77/Data-engineering-tools/tree/main/Python-loogin-todo-list)
 
 ## Future Plans
 
