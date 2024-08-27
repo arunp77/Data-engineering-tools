@@ -2,6 +2,17 @@ import unittest
 
 from prime_v2 import is_prime
 
+""" 
+The first two tests are familiar. They cover the primary use case of your is_prime() function. 
+The third and fourth tests check for those cases where the function gets an argument of an 
+incorrect type. These tests specifically check for floating-point numbers and strings.
+
+The fifth test checks for those situations where the input is 0 or 1. In those cases, the 
+function must raise a ValueError, so that’s what the assertions catch. Finally, the sixth 
+test checks for negative numbers, which must also raise a ValueError. You can run the test 
+from your command line to check how they work.
+"""
+
 class TestIsPrime(unittest.TestCase):
     def test_prime_number(self):
         self.assertTrue(is_prime(17))
