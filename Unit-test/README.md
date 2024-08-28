@@ -14,6 +14,10 @@ Unit testing is the process of testing individual units or components of a softw
 - **Tools**: JUnit (Java), NUnit (.NET), PyTest (Python), etc.
 - **Approach**: Developers write tests to check the behavior of each function, method, or class, typically using mock objects and stubs to isolate the unit.
 
+  - **For unittest:** <code>python python_script.py</code>
+  - **For doctest:**<code>python -m doctest -v python_script.py</code>
+
+
 ### **2. Integration Testing**
 Integration testing focuses on verifying the interactions between different units or components in the software. After individual units have been tested, they are combined to check how they work together.
 
