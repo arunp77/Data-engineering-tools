@@ -38,6 +38,32 @@ The main features of the validation process are as follows:
 - checks if the software meets the customer’s requirements and expectations 
 - follows verification
 
+
+### Key differences between verification and validation
+
+Validation and verification are both critical processes in software development, but they serve different purposes and occur at different stages in the development lifecycle. Below is a detailed table highlighting the key differences between these two processes:
+
+| **Aspect**                     | **Verification**                                                                 | **Validation**                                                                   |
+|--------------------------------|----------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
+| **Purpose**                    | Ensures the product is being built correctly (according to specifications).      | Ensures the right product is built (meets user needs and requirements).          |
+| **Focus**                      | Process-oriented; focuses on whether the software meets specified requirements. | Product-oriented; focuses on whether the software fulfills the intended use.     |
+| **Timing**                     | Performed during the development phase.                                          | Performed after the development phase, typically during testing or pre-release.  |
+| **Activities Involved**        | Inspections, reviews, walkthroughs, desk-checking, and static analysis.          | Functional testing, user acceptance testing (UAT), system testing, integration testing. |
+| **Methodology**                | Generally involves static methods (does not require code execution).             | Involves dynamic methods (requires code execution).                              |
+| **Documentation**              | Verification of design documents, specifications, architecture, and code.        | Validation of the final product against user requirements and real-world scenarios. |
+| **Responsibility**             | Typically handled by developers, QA engineers, and technical reviewers.          | Typically handled by testers, QA teams, and end-users (for UAT).                 |
+| **Questions Addressed**        | "Are we building the product right?"                                             | "Are we building the right product?"                                             |
+| **Outcome**                    | Identifies issues in the process and ensures the product conforms to specifications. | Confirms the product works as intended and satisfies customer requirements.       |
+| **Examples**                   | Code review, design review, unit testing, static code analysis.                  | Beta testing, user acceptance testing, system integration testing.               |
+| **Tools Used**                 | Static analysis tools, design review checklists, code coverage tools.            | Testing frameworks, test management tools, automated testing tools.              |
+| **Error Detection**            | Detects errors early in the development process.                                 | Detects errors that are closer to the user's experience and final product usage.  |
+| **Cost of Error Fixing**       | Lower, as issues are found early in the lifecycle.                               | Higher, as issues are found later in the lifecycle and may require rework.       |
+
+### Summary
+
+- **Verification** is about ensuring the software is built correctly according to specifications through a series of process-oriented checks, often using static methods. 
+- **Validation** is about ensuring the final product meets user needs, involving dynamic methods and testing against real-world scenarios. 
+
 ## Types of Testing in Software Development
 
 ### **1. [Unit Testing](unittest/)**
