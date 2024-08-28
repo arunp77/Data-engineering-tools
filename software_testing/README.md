@@ -1,9 +1,42 @@
-# Python's unittest: Writing Unit Tests for Your Code
+# Verification and Validation in Software Engineering
 
 Code testing or software testing is a fundamental part of a modern software development cycle that ensures the quality, functionality, and performance of the software. Through code testing, you can verify that a given software project works as expected and fulfills its requirements. Testing enforces code quality and robustness.
 
 - The code testing is done during the development stage of an application or project. You’ll write tests that isolate sections of your code and verify its correctness. A well-written battery or suite of tests can also serve as documentation for the project at hand.
+- **Verification** and **validation** are commonly used terms in software testing, but they are frequently confused with each other. This is due to unclear definitions, various interpretations in the labor market and the use of these terms interchangeably in different contexts.
 - There are several types of testing methods used at different stages of the software development lifecycle. Below, I provide a detailed explanation of various testing types, organized into categories based on their purpose and timing in the development process.
+  
+![alt text](image-3.png)
+
+## What is verification in software testing?
+Verification in software testing is the process of checking documents, design, code and program to control whether the software has been built according to requirements. The primary role of the verification system is to guarantee the quality of the application, architecture, design, etc. As part of the software verification process, activities such as reviews here are undertaken.
+
+#### **Features of the verification process**
+The main features of the verification process include:
+
+- inspecting documents, design, code and program
+- it does not require code execution
+- checks if software conforms to specifications
+- finds errors early in the development cycle
+- the target area here is the application and software architecture, complete design, specification, high-level design, and databases
+- it is carried out by the QA team, which makes sure that the software complies with the requirements in the SRS document
+- it uses methods such as instruction, reviews, inspections, and document checking
+- verification happens before validation
+
+## What is validation in software testing?
+Validation in software testing is an effective mechanism for testing and verifying that software adequately meets customer needs. Thanks to this mechanism, it is possible to assess whether the software fulfills its purpose in a suitable environment. During the validation process, activities such as unit testing, integration testing, system testing and user acceptance testing can be performed.
+
+#### **Features of the validation process**
+The main features of the validation process are as follows:
+
+- it is a dynamic mechanism for testing and validating the actual product
+- it always involves code execution
+- it uses methods such as black-box testing, white-box testing, and non-functional testing
+- it can detect bugs, failures and other inaccuracies that the verification process cannot catch
+- the target is the actual product
+- it is performed with the help of a qualified team of testers
+- checks if the software meets the customer’s requirements and expectations 
+- follows verification
 
 ## Types of Testing in Software Development
 
@@ -123,3 +156,8 @@ Security testing aims to identify vulnerabilities, threats, and risks in the sof
 
 ## Conclusion
 Each type of testing serves a specific purpose and helps ensure the software's quality, functionality, and security. A comprehensive testing strategy typically involves a combination of these methods, tailored to the specific needs and requirements of the project. By systematically applying different types of tests throughout the software development lifecycle, teams can identify and fix issues early, reduce the risk of defects in production, and deliver high-quality software to users.
+
+
+# Reference
+- https://www.geeksforgeeks.org/software-engineering-verification-and-validation/ 
+- 
