@@ -5,8 +5,6 @@ Code testing or software testing is a fundamental part of a modern software deve
 - The code testing is done during the development stage of an application or project. You’ll write tests that isolate sections of your code and verify its correctness. A well-written battery or suite of tests can also serve as documentation for the project at hand.
 - **Verification** and **validation** are commonly used terms in software testing, but they are frequently confused with each other. This is due to unclear definitions, various interpretations in the labor market and the use of these terms interchangeably in different contexts.
 - There are several types of testing methods used at different stages of the software development lifecycle. Below, I provide a detailed explanation of various testing types, organized into categories based on their purpose and timing in the development process.
-  
-![alt text](image.png)
 
 ## What is verification in software testing?
 Verification in software testing is the process of checking documents, design, code and program to control whether the software has been built according to requirements. The primary role of the verification system is to guarantee the quality of the application, architecture, design, etc. As part of the software verification process, activities such as reviews here are undertaken.
@@ -63,6 +61,16 @@ Validation and verification are both critical processes in software development,
 
 - **Verification** is about ensuring the software is built correctly according to specifications through a series of process-oriented checks, often using static methods. 
 - **Validation** is about ensuring the final product meets user needs, involving dynamic methods and testing against real-world scenarios. 
+
+## How to Approach Verification & Validation?
+The V-model shows the approach for more formal verification and validation, which developing safety-critical software uses. It illustrates the activities at each stage of development and the relationships between them.
+
+![alt text](image.png)
+
+The V-model is good for illustrating the relationship between the stages of development and stages of validation. At each testing stage, more complete portions of the software are validated against the phase that defines it. However, the V-model might imply a **waterfall development method**. There are ways to incorporate Agile, DevOps, and CI/CD into this type of product development.
+
+Verification involves reviews, walkthroughs, analysis, traceability, test and code coverage, and other activities to make sure teams are building the process and the product correctly. As an example, the execution of unit tests is a validation activity, and ensuring traceability, code coverage, and testing progress of the unit tests is verification. The key role of verification is to ensure building delivered artifacts from the previous stage to specification and in compliance with company and industry guidelines.
+
 
 ## Types of Testing in Software Development
 
@@ -186,4 +194,4 @@ Each type of testing serves a specific purpose and helps ensure the software's q
 
 # Reference
 - https://www.geeksforgeeks.org/software-engineering-verification-and-validation/ 
-- 
+- https://www.parasoft.com/blog/verification-vs-validation-in-embedded-software/
