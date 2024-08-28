@@ -6,7 +6,7 @@ Code testing or software testing is a fundamental part of a modern software deve
 - **Verification** and **validation** are commonly used terms in software testing, but they are frequently confused with each other. This is due to unclear definitions, various interpretations in the labor market and the use of these terms interchangeably in different contexts.
 - There are several types of testing methods used at different stages of the software development lifecycle. Below, I provide a detailed explanation of various testing types, organized into categories based on their purpose and timing in the development process.
   
-![alt text](image-3.png)
+![alt text](image.png)
 
 ## What is verification in software testing?
 Verification in software testing is the process of checking documents, design, code and program to control whether the software has been built according to requirements. The primary role of the verification system is to guarantee the quality of the application, architecture, design, etc. As part of the software verification process, activities such as reviews here are undertaken.
