@@ -18,7 +18,7 @@ Unit testing is the process of testing individual units or components of a softw
   - **For doctest:**<code>python -m doctest -v python_script.py</code>
 
 
-### **2. Integration Testing**
+### **2. [Integration Testing](https://katalon.com/resources-center/blog/integration-testing)**
 Integration testing focuses on verifying the interactions between different units or components in the software. After individual units have been tested, they are combined to check how they work together.
 
 - **Purpose**: Ensure that different components or systems interact correctly.
