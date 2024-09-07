@@ -16,7 +16,7 @@ st.set_page_config(
 )
 
 # Then add the title
-st.title("_Sales Dashboard_ created by :blue[Arun] :sunglasses:")
+st.title(":bar_chart: _Sales Dashboard_ created by :blue[Arun] :sunglasses:")
 
 
 # ---- READ EXCEL ----
