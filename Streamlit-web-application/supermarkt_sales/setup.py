@@ -96,7 +96,8 @@ if option == 'Data Overview':
         title="Customer Type vs Payment Method",
         xaxis_title="Customer Type",
         yaxis_title="Count",
-        legend_title="Payment Method"
+        legend_title="Payment Method",
+        width=800, height=600
     )
 
     # Display the plot
@@ -113,7 +114,7 @@ if option == 'Data Overview':
     daily_sales = df_encoded.groupby('Date')['Total'].sum().reset_index()
 
     # Plot using plotly
-    fig = px.line(daily_sales, x='Date', y='Total', title='Sales Over Time')
+    fig = px.line(daily_sales, x='Date', y='Total', title='Sales Over Time', width=800, height=600)
 
     # Display the plot
     st.plotly_chart(fig)
@@ -128,25 +129,10 @@ if option == 'Data Overview':
     fig = px.imshow(correlation, 
                     text_auto=True, 
                     color_continuous_scale='RdBu_r', 
-                    title='Correlation Heatmap')
+                    title='Correlation Heatmap',
+                    width=900, height=900)
 
     st.plotly_chart(fig)
-    
-    # Customer Segmentation
-    st.subheader('Customer Segmentation by Spending')
-
-    #----------------------------------
-    # Function to categorize customers based on total spending
-    def categorize_customer(total):
-        if total < 200:
-            return 'Low Spender'
-        elif 200 <= total < 500:
-            return 'Medium Spender'
-        else:
-            return 'High Spender'
-        
-    # Apply customer category
-    df['Customer Category'] = df['Total'].apply(categorize_customer)
 
     #----------------------------------
     # Customer Segmentation
@@ -173,7 +159,8 @@ if option == 'Data Overview':
     # Plot customer segments using Plotly
     fig = px.bar(customer_segments, x='Customer Category', y='count', 
                 title='Customer Segments by Spending', 
-                labels={'count': 'Number of Customers'})
+                labels={'count': 'Number of Customers'},
+                width=800, height=600)
     st.plotly_chart(fig)
 
     
@@ -183,7 +170,7 @@ if option == 'Data Overview':
     # Group sales by time
     time_sales = df.groupby('Time')['Total'].sum().reset_index()
     # Plot using Plotly
-    fig = px.line(time_sales, x='Time', y='Total', title='Sales by Hour of the Day', labels={'Total': 'Total Sales'})
+    fig = px.line(time_sales, x='Time', y='Total', title='Sales by Hour of the Day', labels={'Total': 'Total Sales'}, width=800, height=600)
     st.plotly_chart(fig)
     
     #----------------------------------
@@ -192,14 +179,14 @@ if option == 'Data Overview':
     # Group by branch
     branch_income = df.groupby('Branch')['gross income'].sum().reset_index()
     # Plot using Plotly
-    fig = px.bar(branch_income, x='Branch', y='gross income', title='Gross Income by Branch', labels={'gross income': 'Gross Income'})
+    fig = px.bar(branch_income, x='Branch', y='gross income', title='Gross Income by Branch', labels={'gross income': 'Gross Income'}, width=800, height=600)
     st.plotly_chart(fig)
     
     #----------------------------------
     # Rating Distribution
     st.subheader('Distribution of Customer Ratings')
     # Plot histogram using Plotly
-    fig = px.histogram(df, x='Rating', nbins=20, title='Distribution of Customer Ratings', marginal='box', 
+    fig = px.histogram(df, x='Rating', nbins=20, title='Distribution of Customer Ratings', marginal='box', width=800, height=600,
                     labels={'Rating': 'Rating'}, color_discrete_sequence=['blue'])
     st.plotly_chart(fig)
     
@@ -207,27 +194,23 @@ if option == 'Data Overview':
     # Rating based on Product Line
     st.subheader('Customer Ratings by Product Line')
     # Boxplot using Plotly
-    fig = px.box(df, x='Product line', y='Rating', title='Customer Ratings by Product Line', labels={'Rating': 'Rating'})
+    fig = px.box(df, x='Product line', y='Rating', title='Customer Ratings by Product Line', labels={'Rating': 'Rating'}, width=800, height=600)
     fig.update_xaxes(tickangle=45)
     st.plotly_chart(fig)
 
 
 
-
-
-    
-
 # 2. Actual vs Predicted Plot
 if option == 'Actual vs Predicted':
     st.header('Actual vs Predicted Sales')
-    scatter_plot = px.scatter(x=y_test, y=y_pred, labels={'x': 'Actual Sales', 'y': 'Predicted Sales'}, title="Actual vs Predicted Sales")
+    scatter_plot = px.scatter(x=y_test, y=y_pred, labels={'x': 'Actual Sales', 'y': 'Predicted Sales'}, title="Actual vs Predicted Sales", width=800, height=600)
     st.plotly_chart(scatter_plot)
 
 # 3. Residual Plot
 if option == 'Residual Plot':
     st.header('Residual Plot')
     residuals = y_test - y_pred
-    residual_plot = px.scatter(x=y_pred, y=residuals, labels={'x': 'Predicted Sales', 'y': 'Residuals'}, title="Residual Plot")
+    residual_plot = px.scatter(x=y_pred, y=residuals, labels={'x': 'Predicted Sales', 'y': 'Residuals'}, title="Residual Plot", width=800, height=600)
     residual_plot.add_hline(y=0, line_dash="dash", line_color="red")
     st.plotly_chart(residual_plot)
 
@@ -235,7 +218,7 @@ if option == 'Residual Plot':
 if option == 'Residuals Distribution':
     st.header('Distribution of Residuals')
     residuals = y_test - y_pred
-    residual_dist = px.histogram(residuals, nbins=50, marginal='violin', title="Distribution of Residuals")
+    residual_dist = px.histogram(residuals, nbins=50, marginal='violin', title="Distribution of Residuals", width=800, height=600)
     st.plotly_chart(residual_dist)
 
 # 5. Model Performance
@@ -249,7 +232,7 @@ if option == 'Model Performance':
 
     # Bar plot for R-squared and MSE
     performance_fig = go.Figure(go.Bar(x=['R-squared', 'MSE'], y=[r_squared, mse], marker_color=['blue', 'green']))
-    performance_fig.update_layout(title_text="Model Performance Metrics", yaxis_title="Score")
+    performance_fig.update_layout(title_text="Model Performance Metrics", yaxis_title="Score", width=800, height=600)
     st.plotly_chart(performance_fig)
 
 # 6. Learning Curve (if you've implemented it)
@@ -265,5 +248,5 @@ if option == 'Learning Curve':
     learning_curve_fig = go.Figure()
     learning_curve_fig.add_trace(go.Scatter(x=train_sizes, y=train_scores_mean, mode='lines', name='Training Score'))
     learning_curve_fig.add_trace(go.Scatter(x=train_sizes, y=test_scores_mean, mode='lines', name='Validation Score'))
-    learning_curve_fig.update_layout(title='Learning Curve', xaxis_title='Training Size', yaxis_title='R-squared Score')
+    learning_curve_fig.update_layout(title='Learning Curve', xaxis_title='Training Size', yaxis_title='R-squared Score', width=800, height=600)
     st.plotly_chart(learning_curve_fig)
