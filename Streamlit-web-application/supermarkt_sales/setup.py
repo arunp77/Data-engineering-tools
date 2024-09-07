@@ -30,6 +30,13 @@ y_pred = model.predict(X_test)
 st.set_page_config(page_title="Sales Dashboard", page_icon=":bar_chart:", layout="wide")
 st.title(":bar_chart: _Sales Dashboard_ created by :blue[Arun] :sunglasses:")
 
+# Add developer information
+st.markdown("""
+    **Name of the Developer:** Arun Kumar Pandey  
+    **GitHub Repo:** [Sales Data dashboard](https://github.com/arunp77/Data-engineering-tools/tree/main/Streamlit-web-application/supermarkt_sales)  
+    **Email ID:** arunp77@gmail.com
+""")
+
 # Sidebar for navigation
 st.sidebar.title("Navigation")
 option = st.sidebar.radio("Select Analysis", ('Data Overview', 'Actual vs Predicted', 'Residual Plot', 'Residuals Distribution', 'Model Performance', 'Learning Curve'))
