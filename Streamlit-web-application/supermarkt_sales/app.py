@@ -18,7 +18,6 @@ st.set_page_config(
 # Then add the title
 st.title(":bar_chart: _Sales Dashboard_ created by :blue[Arun] :sunglasses:")
 
-
 # ---- READ EXCEL ----
 @st.cache_data
 def get_data_from_excel():
