@@ -5,11 +5,19 @@ Sales Dashboard built-in Python and the Streamlit library to visualize Excel dat
 ## Run the app
 ```python 
 # vanilla terminal
-streamlit run app.py
+streamlit run setup.py
 
 # quit
 ctrl-c
 ```
+
+![alt text](image.png) 
+
+
+## Video
+
+[Available on youtube:](https://youtu.be/pqi1fY-l4AY)
+
 
 # Reference 
 - https://github.com/Sven-Bo/streamlit-sales-dashboard/tree/main
