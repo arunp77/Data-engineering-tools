@@ -9,7 +9,8 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score, mean_squared_error
 
 # Load Data
-df = pd.read_excel('supermarkt_sales.xlsx', skiprows=3)
+# df = pd.read_excel('supermarkt_sales.xlsx', skiprows=3)
+df = pd.read_excel('/mount/src/data-engineering-tools/Streamlit-web-application/supermarkt_sales/supermarkt_sales.xlsx', skiprows=3)
 df = df.drop(df.columns[0], axis=1)
 
 # Preprocess Data
