@@ -2,6 +2,8 @@
 
 Sales Dashboard built-in Python and the Streamlit library to visualize Excel data.
 
+**The dashboard is available at streamlit:** https://supermarket-salesdashboard.streamlit.app/
+
 ## Run the app
 ```python 
 # vanilla terminal

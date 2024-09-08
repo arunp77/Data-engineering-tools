@@ -9,7 +9,10 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score, mean_squared_error
 
 # Load Data
+# To run into local machine uncomment this line
 # df = pd.read_excel('supermarkt_sales.xlsx', skiprows=3)
+
+# To deploy this on streamlit page, please uncomment this one.
 df = pd.read_excel('/mount/src/data-engineering-tools/Streamlit-web-application/supermarkt_sales/supermarkt_sales.xlsx', skiprows=3)
 df = df.drop(df.columns[0], axis=1)
 
