@@ -37,7 +37,7 @@ Available on my youtube channel:
 
 <div style="border: 1px solid white; padding: 10px;">
   <a href="https://www.youtube.com/watch?v=pqi1fY-l4AY" target="_blank">
-    <img src="Streamlit-logo-primary-colormark-darktext.png" alt="Click to Watch the Video" style="width: 100%; border: 1px solid #000;">
+    <img src="Streamlit-logo.png" alt="Click to Watch the Video" style="width: 100%; border: 1px solid #000;">
   </a>
 </div>
 
