@@ -22,6 +22,7 @@ Welcome to my Data Engineering Toolbox repository! Here, you'll find a collectio
 - [Python-logging-todo-list](https://github.com/arunp77/Data-engineering-tools/tree/main/Python-logging-todo-list)
 - [Software testing](https://github.com/arunp77/Data-engineering-tools/tree/main/Unit-test)
 - [Streamlit web application: Supermarket Sales data dashboard](https://github.com/arunp77/Data-engineering-tools/tree/main/Streamlit-web-application)
+- [Example poetry projec](https://github.com/arunp77/Data-engineering-tools/tree/main/example-poetry-project)
 
 ## Future Plans
 
