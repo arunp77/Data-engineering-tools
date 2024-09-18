@@ -169,3 +169,8 @@ example-poetry-project/
 ### Next Steps:
 - You can extend this project with additional modules or dependencies.
 - Add more scripts, packages, or unit tests to structure it further.
+
+
+# Reference
+- [Poetry Documentation](https://python-poetry.org/docs/) 
+- https://python-poetry.org/docs/cli/
