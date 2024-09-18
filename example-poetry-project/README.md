@@ -1,3 +1,5 @@
+# Project to understand poetry library
+
 ### Project Structure:
 This project demonstrates how to structure a Python project using **Poetry** for dependency management, testing with **pytest**, and organizing the source code and tests using a `src/` directory structure.
 ```
