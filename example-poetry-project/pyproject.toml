@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "hello-world"
+version = "0.1.0"
+description = "Just to showcase how the poetry library works"
+authors = ["Arun Kumar Pandey <arunp77@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+my_project = "my_project.main:hello_world"
