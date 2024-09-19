@@ -164,3 +164,4 @@ Docker/getting-started-app/
 
 # Ignore large data files
 python-ui/Ui-project/data/*.xlsx
+Tinker/
