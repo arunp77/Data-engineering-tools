@@ -5,7 +5,7 @@
 """
 
 
-from tkinter import *
+from tkinter import *                        #  imported everything (*) from the tkinter module
 from tkinter import ttk
 
 def calculate(*args):
