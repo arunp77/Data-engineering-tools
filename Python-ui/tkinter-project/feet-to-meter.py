@@ -88,5 +88,6 @@ feet_entry.focus()
 # Bind the Enter/Return key to trigger the calculation
 root.bind("<Return>", calculate)
 
+
 # Start the Tkinter event loop to run the application
 root.mainloop()
