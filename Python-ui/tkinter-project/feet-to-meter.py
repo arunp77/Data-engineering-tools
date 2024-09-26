@@ -5,9 +5,11 @@
 """
 
 
-from tkinter import *                        #  imported everything (*) from the tkinter module
-from tkinter import ttk                      #  ttk is a submodule of tkinter. It implements Python's binding to the newer "themed widgets" that were added to Tk
+from tkinter import *                       #  imported everything (*) from the tkinter module
+from tkinter import ttk                     #  ttk is a submodule of tkinter. It implements 
+                                            # Python's binding to the newer "themed widgets" that were added to Tk
 
+#--------------------------------------------------------
 def calculate(*args):
     """
     Convert the value entered in the 'feet' entry field to meters and 
@@ -44,7 +46,8 @@ def calculate(*args):
     except ValueError:
         # If the input is not a valid number, do nothing
         pass
-
+    
+#--------------------------------------------------------
 # Create the main application window 
 root = Tk()                                   # 
 root.title("Feet to Meters")
@@ -73,6 +76,7 @@ After the frame is created, grid places it directly inside our main application 
 # # Set the -alpha value to 0.6
 # root.attributes("-alpha", 0.8)
 
+#--------------------------------------------------------
 # Create a StringVar to store the input value for feet
 feet = StringVar()
 
