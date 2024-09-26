@@ -6,7 +6,7 @@
 
 
 from tkinter import *                        #  imported everything (*) from the tkinter module
-from tkinter import ttk
+from tkinter import ttk                      #  ttk is a submodule of tkinter. It implements Python's binding to the newer "themed widgets" that were added to Tk
 
 def calculate(*args):
     """
@@ -45,17 +45,33 @@ def calculate(*args):
         # If the input is not a valid number, do nothing
         pass
 
-# Create the main application window
-root = Tk()
+# Create the main application window 
+root = Tk()                                   # 
 root.title("Feet to Meters")
+# Set the window size
+root.geometry("400x300")
 
-# Create a frame that will hold all the widgets with padding
+# Create a main frame that will hold all the widgets with padding
 mainframe = ttk.Frame(root, padding="3 3 12 12")
 mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
 
 # Configure the main application window to resize properly
 root.columnconfigure(0, weight=1)
 root.rowconfigure(0, weight=1)
+""" 
+After the frame is created, grid places it directly inside our main application window. 
+- The columnconfigure/rowconfigure bits tell Tk that the frame should expand to fill any extra space if the window is resized.
+- The columnconfigure/rowconfigure bits tell Tk that the frame should expand to fill any extra space if the window is resized.
+"""
+
+# # Disable the window's resizing capability
+# root.resizable(False, False)
+
+# # Set the window to a zoomed mode
+# root.state("zoomed")
+
+# # Set the -alpha value to 0.6
+# root.attributes("-alpha", 0.8)
 
 # Create a StringVar to store the input value for feet
 feet = StringVar()
