@@ -6,6 +6,9 @@ from app.schemas import product as schemas
 from app.models import product as models
 from app.db.session import SessionLocal
 
+from app.schemas.product import ProductCreate, ProductRead
+
+
 router = APIRouter()
 
 def get_db():
@@ -29,3 +32,8 @@ def read_products(skip: int = 0, limit: int = 10, db: Session = Depends(get_db))
     return products
 
 # Add more endpoints for update, delete, etc.
+# Define your routes here, for example:
+@router.post("/products/", response_model=ProductRead)
+def create_product(product: ProductCreate):
+    # Implementation for creating a product
+    pass
